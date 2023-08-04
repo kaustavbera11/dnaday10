@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --output=/Users/kaustavbera11/workshop-day3/results/o_and_e/%x_%j.out
+#SBATCH --error=/Users/kaustavbera11/workshop-day3/results/o_and_e/%x_%j.err
+#SBATCH --mail-user=kabe4658@colorado.edu 
+#SBATCH -p compute
+#SBATCH -N 1
+#SBATCH -c 1
+#SBATCH --mem=256Mb
+
+echo "downloading the file"
+
+wget -c -P /Users/kaustavbera11/workshop-day3/data ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase3/data/HG00096/sequence_read/SRR062641.filt.fastq.gz
+
+echo "Done with Kaustav's Download"

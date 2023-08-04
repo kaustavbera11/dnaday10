@@ -1,0 +1,16 @@
+#!/bin/bash
+#SBATCH --output=/Users/kaustavbera11/day_3_homework/result/e_and_o/%x_%j.out
+#SBATCH --error=/Users/kaustavbera11/day_3_homework/result/e_and_o/%x_%j.err
+#SBATCH --mail-user=kabe4658@colorado.edu 
+#SBATCH -p compute
+#SBATCH -N 1
+#SBATCH -c 1
+#SBATCH --mem=256Mb
+
+module load fastqc/0.11.5
+
+echo "working with FASTQC"
+date
+fastqc -o /Users/kaustavbera11/day_3_homework/result /Users/kaustavbera11/day_3_homework/data/SRR792473_1.fastq.gz
+date
+echo "Done with FASTQC run"

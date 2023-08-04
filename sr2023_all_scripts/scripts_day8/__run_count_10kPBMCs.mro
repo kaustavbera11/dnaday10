@@ -1,0 +1,24 @@
+@include "sc_rna_counter_cs.mro"
+
+call SC_RNA_COUNTER_CS(
+    sample_id = "run_count_10kPBMCs",
+    sample_def = [ 
+            {
+                "fastq_mode": "ILMN_BCL2FASTQ",
+                "gem_group": null,
+                "lanes": null,
+                "read_path": "/scratch/Shares/public/sread2023/data_files/day8/10k_PBMC_3p_nextgem_Chromium_X_fastqs",
+                "sample_indices": [ "any" ],
+                "sample_names": [ "10k_PBMC_3p_nextgem_Chromium_X" ]
+            }
+    ],
+    sample_desc = "",
+    reference_path = "/scratch/Shares/public/sread2023/data_files/day8/refdata-gex-GRCh38-2020-A",
+    recovered_cells = 10000,
+    force_cells = null,
+    no_secondary_analysis = false,
+    chemistry = "auto",
+    r1_length = null,
+    r2_length = null,
+    feature_reference = null,
+)

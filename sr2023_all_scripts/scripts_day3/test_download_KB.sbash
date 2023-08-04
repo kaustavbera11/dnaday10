@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --output=/Users/kaustavbera11/workshop-day3/results/output/%x_%j.out
+#SBATCH --error=/Users/kaustavbera11/workshop-day3/results/error/%x_%j.err
+#SBATCH --mail-user=kabe4658@colorado.edu 
+#SBATCH -p compute
+#SBATCH -N 1
+#SBATCH -c 1
+#SBATCH --mem=256Mb
+
+echo "spinning up the server"
+
+sleep 15
+
+echo "Done with Kaustav's spin"
